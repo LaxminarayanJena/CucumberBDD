@@ -1,231 +1,342 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/main/java/Features/taggedhooks.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/main/java/Features/Login.feature");
 formatter.feature({
   "line": 1,
-  "name": "Test Tagged Hooks",
+  "name": "Free CRM Login Feature",
   "description": "",
-  "id": "test-tagged-hooks",
+  "id": "free-crm-login-feature",
   "keyword": "Feature"
 });
-formatter.before({
-  "duration": 6214948,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 504289,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 348531,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 4,
-  "name": "This is First test",
-  "description": "",
-  "id": "test-tagged-hooks;this-is-first-test",
-  "type": "scenario",
-  "keyword": "Scenario",
-  "tags": [
+formatter.scenarioOutline({
+  "comments": [
     {
       "line": 3,
-      "name": "@First"
-    }
-  ]
-});
-formatter.step({
-  "line": 5,
-  "name": "this is the first step",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 6,
-  "name": "this is the second step",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 7,
-  "name": "this is the third step",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "TaggedHooksStepDefinition.this_is_the_first_step()"
-});
-formatter.result({
-  "duration": 168068328,
-  "status": "passed"
-});
-formatter.match({
-  "location": "TaggedHooksStepDefinition.this_is_the_second_step()"
-});
-formatter.result({
-  "duration": 65799,
-  "status": "passed"
-});
-formatter.match({
-  "location": "TaggedHooksStepDefinition.this_is_the_third_step()"
-});
-formatter.result({
-  "duration": 70940,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 86362,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 287357,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 89446,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 482700,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 1257383,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 112578,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 10,
-  "name": "This is Second test",
-  "description": "",
-  "id": "test-tagged-hooks;this-is-second-test",
-  "type": "scenario",
-  "keyword": "Scenario",
-  "tags": [
+      "value": "##without Examples Keyword"
+    },
+    {
+      "line": 4,
+      "value": "#Scenario: Free CRM Login Test Scenario"
+    },
+    {
+      "line": 5,
+      "value": "#"
+    },
+    {
+      "line": 6,
+      "value": "#Given user is already on Login Page"
+    },
+    {
+      "line": 7,
+      "value": "#When title of login page is Free CRM"
+    },
+    {
+      "line": 8,
+      "value": "#Then user enters \"heardm\" and \"123heard\""
+    },
     {
       "line": 9,
-      "name": "@Second"
-    }
-  ]
-});
-formatter.step({
-  "line": 11,
-  "name": "this is the first step",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 12,
-  "name": "this is the second step",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 13,
-  "name": "this is the third step",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "TaggedHooksStepDefinition.this_is_the_first_step()"
-});
-formatter.result({
-  "duration": 96642,
-  "status": "passed"
-});
-formatter.match({
-  "location": "TaggedHooksStepDefinition.this_is_the_second_step()"
-});
-formatter.result({
-  "duration": 72996,
-  "status": "passed"
-});
-formatter.match({
-  "location": "TaggedHooksStepDefinition.this_is_the_third_step()"
-});
-formatter.result({
-  "duration": 103326,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 299695,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 86875,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 75052,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 422555,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 112064,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 193799,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 16,
-  "name": "This is Third test",
-  "description": "",
-  "id": "test-tagged-hooks;this-is-third-test",
-  "type": "scenario",
-  "keyword": "Scenario",
-  "tags": [
+      "value": "#Then user clicks on login button"
+    },
     {
-      "line": 15,
-      "name": "@Third"
+      "line": 10,
+      "value": "#Then user is on home page"
+    },
+    {
+      "line": 11,
+      "value": "#Then close the browser"
+    },
+    {
+      "line": 14,
+      "value": "#with Examples Keyword"
     }
-  ]
+  ],
+  "line": 15,
+  "name": "Free CRM Login Test Scenario",
+  "description": "",
+  "id": "free-crm-login-feature;free-crm-login-test-scenario",
+  "type": "scenario_outline",
+  "keyword": "Scenario Outline"
 });
 formatter.step({
   "line": 17,
-  "name": "this is the first step",
+  "name": "user is already on Login Page",
   "keyword": "Given "
 });
 formatter.step({
   "line": 18,
-  "name": "this is the second step",
+  "name": "title of login page is Free CRM",
   "keyword": "When "
 });
 formatter.step({
   "line": 19,
-  "name": "this is the third step",
+  "name": "user enters \"\u003cusername\u003e\" and \"\u003cpassword\u003e\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 20,
+  "name": "user clicks on login button",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 21,
+  "name": "user is on home page",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 22,
+  "name": "close the browser",
+  "keyword": "Then "
+});
+formatter.examples({
+  "line": 25,
+  "name": "",
+  "description": "",
+  "id": "free-crm-login-feature;free-crm-login-test-scenario;",
+  "rows": [
+    {
+      "cells": [
+        "username",
+        "password"
+      ],
+      "line": 26,
+      "id": "free-crm-login-feature;free-crm-login-test-scenario;;1"
+    },
+    {
+      "cells": [
+        "heardm",
+        "123heard"
+      ],
+      "line": 27,
+      "id": "free-crm-login-feature;free-crm-login-test-scenario;;2"
+    },
+    {
+      "cells": [
+        "tom",
+        "peter"
+      ],
+      "line": 28,
+      "id": "free-crm-login-feature;free-crm-login-test-scenario;;3"
+    }
+  ],
+  "keyword": "Examples"
+});
+formatter.before({
+  "duration": 6196939,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 436433,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 27,
+  "name": "Free CRM Login Test Scenario",
+  "description": "",
+  "id": "free-crm-login-feature;free-crm-login-test-scenario;;2",
+  "type": "scenario",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 17,
+  "name": "user is already on Login Page",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 18,
+  "name": "title of login page is Free CRM",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 19,
+  "name": "user enters \"heardm\" and \"123heard\"",
+  "matchedColumns": [
+    0,
+    1
+  ],
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 20,
+  "name": "user clicks on login button",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 21,
+  "name": "user is on home page",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 22,
+  "name": "close the browser",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "TaggedHooksStepDefinition.this_is_the_first_step()"
+  "location": "LoginStepDefinations.user_is_already_on_Login_Page()"
 });
 formatter.result({
-  "duration": 115663,
+  "duration": 18323602604,
   "status": "passed"
 });
 formatter.match({
-  "location": "TaggedHooksStepDefinition.this_is_the_second_step()"
+  "location": "LoginStepDefinations.title_of_login_page_is_Free_CRM()"
 });
 formatter.result({
-  "duration": 281190,
+  "duration": 17524669,
   "status": "passed"
 });
 formatter.match({
-  "location": "TaggedHooksStepDefinition.this_is_the_third_step()"
+  "arguments": [
+    {
+      "val": "heardm",
+      "offset": 13
+    },
+    {
+      "val": "123heard",
+      "offset": 26
+    }
+  ],
+  "location": "LoginStepDefinations.user_enters_and(String,String)"
 });
 formatter.result({
-  "duration": 81221,
+  "duration": 316117441,
+  "status": "passed"
+});
+formatter.match({
+  "location": "LoginStepDefinations.user_clicks_on_login_button()"
+});
+formatter.result({
+  "duration": 12520701275,
+  "status": "passed"
+});
+formatter.match({
+  "location": "LoginStepDefinations.user_is_on_home_page()"
+});
+formatter.result({
+  "duration": 9720791,
+  "status": "passed"
+});
+formatter.match({
+  "location": "LoginStepDefinations.close_the_browser()"
+});
+formatter.result({
+  "duration": 1285511086,
   "status": "passed"
 });
 formatter.after({
-  "duration": 90988,
+  "duration": 118746,
   "status": "passed"
 });
 formatter.after({
-  "duration": 71968,
+  "duration": 101783,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 944320,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 149076,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 28,
+  "name": "Free CRM Login Test Scenario",
+  "description": "",
+  "id": "free-crm-login-feature;free-crm-login-test-scenario;;3",
+  "type": "scenario",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 17,
+  "name": "user is already on Login Page",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 18,
+  "name": "title of login page is Free CRM",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 19,
+  "name": "user enters \"tom\" and \"peter\"",
+  "matchedColumns": [
+    0,
+    1
+  ],
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 20,
+  "name": "user clicks on login button",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 21,
+  "name": "user is on home page",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 22,
+  "name": "close the browser",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "LoginStepDefinations.user_is_already_on_Login_Page()"
+});
+formatter.result({
+  "duration": 8575238972,
+  "status": "passed"
+});
+formatter.match({
+  "location": "LoginStepDefinations.title_of_login_page_is_Free_CRM()"
+});
+formatter.result({
+  "duration": 26630135,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "tom",
+      "offset": 13
+    },
+    {
+      "val": "peter",
+      "offset": 23
+    }
+  ],
+  "location": "LoginStepDefinations.user_enters_and(String,String)"
+});
+formatter.result({
+  "duration": 227254197,
+  "status": "passed"
+});
+formatter.match({
+  "location": "LoginStepDefinations.user_clicks_on_login_button()"
+});
+formatter.result({
+  "duration": 3729308107,
+  "status": "passed"
+});
+formatter.match({
+  "location": "LoginStepDefinations.user_is_on_home_page()"
+});
+formatter.result({
+  "duration": 19087397,
+  "status": "passed"
+});
+formatter.match({
+  "location": "LoginStepDefinations.close_the_browser()"
+});
+formatter.result({
+  "duration": 986185785,
   "status": "passed"
 });
 formatter.after({
-  "duration": 237494,
+  "duration": 77622,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 66313,
   "status": "passed"
 });
 });
