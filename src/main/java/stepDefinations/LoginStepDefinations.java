@@ -1,3 +1,4 @@
+/*
 package stepDefinations;
 
 import org.openqa.selenium.By;
@@ -74,3 +75,5 @@ public class LoginStepDefinations {
 	}
 
 }
+
+*/
