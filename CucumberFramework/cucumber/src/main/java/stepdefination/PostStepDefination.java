@@ -18,15 +18,15 @@ public class PostStepDefination {
 	    System.out.println("User should be logged in");
 	}
 
-    @When("^I type the text in the text box$")
-    public void i_type_the_text_in_the_text_box() throws Throwable {
-        System.out.println("I type the text in the text box");
+	@When("^I type the text as \"([^\"]*)\" in the text box$")
+    public void i_type_the_text_as_something_in_the_text_box(String strArg1) throws Throwable {
+        System.out.println(strArg1);
     }
 
-    @When("^User supply the youtube link in the text box$")
-    public void user_supply_the_youtube_link_in_the_text_box() throws Throwable {
-    	System.out.println("User supply the youtube link in the text box");
-    }
+	 @When("^User supply the youtube link \"([^\"]*)\" in the text box$")
+	    public void user_supply_the_youtube_link_something_in_the_text_box(String strArg1) throws Throwable {
+		 System.out.println(strArg1);
+	    }
 
     @Then("^the message should get posted$")
     public void the_message_should_get_posted() throws Throwable {
