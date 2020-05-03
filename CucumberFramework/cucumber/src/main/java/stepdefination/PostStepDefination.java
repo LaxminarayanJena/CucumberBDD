@@ -2,6 +2,7 @@ package stepdefination;
 
 import org.junit.runner.RunWith;
 
+import base.BaseClass;
 import cucumber.api.Transform;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -15,15 +16,31 @@ import transform.TransformData;
 @RunWith(Cucumber.class)
 public class PostStepDefination {
 
+	/*pico container
+	 * To create a reference variable in the dependent class
+	 * To intialise the reference variable via constructor
+	 *  
+	 */
+	
+	private BaseClass baseClass;
+	
+	public PostStepDefination(BaseClass baseClass)
+	{
+		this.baseClass=baseClass;
+	}
+	
   
 	@Given("User should be logged in")
 	public void user_should_be_logged_in() {
 	    System.out.println("User should be logged in");
+	    System.out.println(baseClass.getFeatureName());
+	    System.out.println(baseClass.getScenarioName());
 	}
 
 	@When("^I type the text as \"([^\"]*)\" in the text box$")
     public void i_type_the_text_as_something_in_the_text_box(String strArg1) throws Throwable {
         System.out.println(strArg1);
+       
     }
 
 	 @When("^User supply the youtube link \"([^\"]*)\" in the text box$")
