@@ -1,6 +1,7 @@
 package stepdefination;
 
 import java.util.List;
+import java.util.Map;
 
 import cucumber.api.DataTable;
 import cucumber.api.java.en.Given;
@@ -16,11 +17,24 @@ public class LoginStepDefination {
 
 	@When("User login with the following username and password")
 	public void user_login_with_the_following_username_and_password(DataTable table){
-		List<List<String>> data=  table.raw();
+		/*List<List<String>> data=  table.raw();
 		for(List<String> str : data){
 			for(String str1 : str){
 				System.out.println("Data : " + str1);
 			}
+		}
+		
+Map<String, String> data = table.asMap(String.class, String.class);
+		
+		for(String key : data.keySet()){
+			System.out.println(String.format("Key : %s , Value : %s", key,data.get(key)));
+		}
+		*/
+		
+List<String> dataList = table.asList(String.class);
+		
+		for(String key : dataList){
+			System.out.println(String.format("Value : %s", key));
 		}
 	}
 
@@ -34,6 +48,19 @@ public class LoginStepDefination {
 	  
 	}
 
+	@Given("^a precondition has value \"([^\"]*)\"$")
+	public void a_precondition_has_value(String arg1) throws Throwable {
+	   System.out.println(String.format("Value : %s", arg1));
+	}
 
+	@Given("^something with \"([^\"]*)\"$")
+	public void something_with(String arg1) throws Throwable {
+		  System.out.println(String.format("Value : %s", arg1));
+	}
+
+	@Then("^check \"([^\"]*)\" is the output$")
+	public void check_is_the_output(String arg1) throws Throwable {
+		  System.out.println(String.format("Value : %s", arg1));
+	}
 
 }
