@@ -2,12 +2,14 @@ package runner;
 
 import org.junit.runner.RunWith;
 
-import io.cucumber.junit.Cucumber;
-import io.cucumber.junit.CucumberOptions;
+import cucumber.api.CucumberOptions;
+import cucumber.api.junit.Cucumber;
+
+
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features={"src/main/java/features/PostFeature.feature"},
+		features={"src/main/java/features/Login.feature"},
 		glue = {"stepdefination"},
 		monochrome = true,
 		strict = true
