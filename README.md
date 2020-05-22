@@ -1,6 +1,6 @@
 # CucumberBDD
-sample project to demonstrate how to work with Selenium and cucumber for Java
-
+sample project to demonstrate how to work with Selenium and cucumber for Java </br>
+Latestversion-1.2.6  info.cukes nov 2019
 ### Pico Container
 instead of creating object of LoginPage class in LoginSteps class
 
