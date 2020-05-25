@@ -44,3 +44,26 @@ if (scenario.isFailed())
  }     
          }
 ```
+### Run one step multiple times in a scenario
+```
+@Then("^user enters username and password$")
+public void user_enters_username_and_password(DataTable credentials) throws Throwable {
+	for(Map<String, String> data :credentials.asMaps(String.class, String.class))
+	{
+		System.out.println(data.get("username"));
+		System.out.println(data.get("password"));
+	}
+	
+}
+
+Feature: Free CRM Login Feature
+
+Scenario: Free CRM Login Test Scenario
+Given user is already on Login Page
+When title of login page is Free CRM
+Then user enters username and password
+| username| password|
+| heardm | 123heard|
+| tom  | peter|
+Then user clicks on login button
+```
