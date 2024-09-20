@@ -1,6 +1,21 @@
 # CucumberBDD
 sample project to demonstrate how to work with Selenium and cucumber for Java </br>
-Latestversion-1.2.6  info.cukes nov 2019
+Latestversion-7.18.1  io.cucumber » cucumber-java sept 2024
+
+
+### Hooks
+
+@Before: Preparing test data, setting up databases, launching a browser, etc. </br>
+@After: Closing browsers, cleaning up test data, writing logs, etc. </br>
+@BeforeStep/@AfterStep: Logging, screenshot capturing, etc., at each step. </br>
+#### TaggedHooks
+```
+@Before("@Login")
+    public void beforeLoginScenario() {
+        // Code to run before scenarios tagged with @Login
+        System.out.println("This will run before scenarios tagged with @Login");
+    }
+```
 
 ### run from command line
 mvn test -Dcucumber.filter.tags="@smoke"
